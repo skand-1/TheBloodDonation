@@ -52,7 +52,7 @@
         <li><a href="#updateStatus" onclick="addpackage()">ADD BLOOD PACKAGE</a></li>
         <li><a href="#updateStatus" onclick="updatestatus()">UPDATE DONOR'S STATUS</a></li>
         <li><a href="#profile" onclick="updatebloodgroup()">UPDATE BLOOD GROUP</a></li>
-        <li><a href="#logout">LOGOUT</a></li>
+        <li><a href="../LogOut">LOGOUT</a></li>
     </ul>
     <!--Home section-->
     <section id="home" class="section home-section">
@@ -72,7 +72,7 @@
                         </div>
                         <div class="card-content ">
                             <div class="form">
-                                <form action="adddonor" method="post">
+                                <form action="reg" method="post" enctype="multipart/form-data" >
                                     <div class="row">
                                         <div class="col s12 m6">
                                             <div class="input-field col s12">
@@ -161,7 +161,7 @@
                                         </div>
                                         <div class="col s12 m6">
                                             <div class="input-field col s12">
-                                                <input type="number" name="aduweight">
+                                                <input type="number" name="weight">
                                                 <label for="adweight">Weight</label>
                                             </div>
                                         </div>

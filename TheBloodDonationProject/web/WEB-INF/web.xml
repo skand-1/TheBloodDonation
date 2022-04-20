@@ -7,12 +7,30 @@
         <servlet-name>Registration</servlet-name>
         <servlet-class>basic.Registration</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DisplayImage</servlet-name>
+        <servlet-class>basic.DisplayImage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Gen</servlet-name>
+        <servlet-class>basic.GenerateReport</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EligibleDonor</servlet-name>
+        <servlet-class>basic.EligibleDonor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>basic.LogOut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/reg</url-pattern>
     </servlet-mapping>
-    
-    
+    <servlet-mapping>
+        <servlet-name>Gen</servlet-name>
+        <url-pattern>/gen</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>log</servlet-name>
         <servlet-class>basic.LogIn</servlet-class>
@@ -21,20 +39,32 @@
         <servlet-name>log</servlet-name>
         <url-pattern>/log</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayImage</servlet-name>
+        <url-pattern>/dis</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EligibleDonor</servlet-name>
+        <url-pattern>/Eli</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    <context-param> 
-   <description>Location to store uploaded file</description> 
-   <param-name>file-upload</param-name> 
-   <param-value>
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>
       D:\#TheBloodDonationProject\img\
-   </param-value> 
-</context-param>
-<error-page>
-    <error-code>500</error-code>
-    <location>/homepage.html</location>
-</error-page>
+   </param-value>
+    </context-param>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/homepage.html</location>
+    </error-page>
 </web-app>

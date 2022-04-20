@@ -53,31 +53,20 @@ public class Registration extends HttpServlet {
 
             LocalDate dob = LocalDate.parse(date);
             String fname = request.getParameter("fname");
-            out.print(fname);
             String phno = request.getParameter("phno");
             String lname = request.getParameter("lname");
-            out.print(lname);
             String email = request.getParameter("email");
-            out.print(email);
             String password = request.getParameter("pwd");
-            out.print(password);
             String bloodgroup = request.getParameter("bloodgroup");
-            out.print(bloodgroup);
             String weight = request.getParameter("weight");
-            out.print(weight);
             String gender = request.getParameter("gender");
-            out.print(gender);
             String address = request.getParameter("address");
-            out.print(address);
             String pin = request.getParameter("pin");
-            out.print(pin);
             String sphno = request.getParameter("sphno");
-            out.print(sphno);
             Part pr = request.getPart("filename");
             String filename = pr.getSubmittedFileName();
             int a = calculateAge(dob);
             String age = String.valueOf(a);
-            out.print(age);
 
             String query = "INSERT INTO `registration_master`( `r_fname`, `r_lname`, `r_phno`, `r_email`, `r_password`, `r_age`, `r_bloodgroup`,`r_sphno`, `r_address`, `r_pincode`,`r_document`,r_dob,r_gender,r_weight) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             String connectionString = "jdbc:mysql://localhost:3306/blooddonation?zeroDateTimeBehavior=CONVERT_TO_NULL";
@@ -107,7 +96,10 @@ public class Registration extends HttpServlet {
             String path = "D:\\#TheBloodDonationProject\\img\\" + pr.getSubmittedFileName();
             FileOutputStream fos = new FileOutputStream(path);
             fos.write(b);
-
+            
+            
+            
+            response.sendRedirect("http://localhost:8080/TheBloodDonationProject/");
             // buffered output
         } catch(SQLException e){
         out.print(e.getMessage());

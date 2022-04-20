@@ -64,6 +64,7 @@ public class LogIn extends HttpServlet {
                 if (type.equalsIgnoreCase("donor")) {
                      String url = "http://localhost:8080/TheBloodDonationProject/Donor/Donor.jsp";
                     response.sendRedirect(url);
+                    
 
                 } else if (type.equalsIgnoreCase("admin")) {
                       String url = "http://localhost:8080/TheBloodDonationProject/Admin/Admin.jsp";
@@ -74,7 +75,7 @@ public class LogIn extends HttpServlet {
                      String url = "http://localhost:8080/TheBloodDonationProject/Manager/Manager.jsp";
                     response.sendRedirect(url);
                 } else {
-                    out.print("who the hell are you");
+                    out.print("Not allowed");
                 }
             } else {
                 out.print("there is no record found");
